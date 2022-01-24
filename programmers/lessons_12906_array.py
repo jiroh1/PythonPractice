@@ -32,4 +32,28 @@ for i in range(0,len(arr)):
     elif arr[i] != arr[i-1]:
         answer.append(arr[i])
 print(answer)
+'''
+다른 사람 답
+def no_continuous(s):
+    a = []
+    for i in s:
+        if a[-1:] == [i]: continue
+        a.append(i)
+    return a
 
+# 아래는 테스트로 출력해 보기 위한 코드입니다.
+print( no_continuous( "133303" ))
+#=====================================
+
+def no_continuous(s):
+    result = []
+    for c in s:
+        if (len(result) == 0) or (result[-1] != c):
+            result.append(c)
+    return result
+
+# 아래는 테스트로 출력해 보기 위한 코드입니다.
+print( no_continuous( "133303" ))
+
+
+'''
