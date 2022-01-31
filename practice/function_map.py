@@ -6,7 +6,7 @@ myList = [1, 2, 3, 4, 5]
 # map 함수 이용
 def add_one(n):
     print(n+1)
-    return n + 1 #return 받아서 하나씩 리스트로 넣어주고 있음.
+    return n + 1 #return 받아서 하나씩 리스트로 넣어주고 있음. # 2, 3, 4, 5, 6
     print('@@') # return 하니깐 없어지는 공간
 result2 = list(map(add_one, myList))
 print('@@@')
@@ -14,32 +14,74 @@ print('@@@')
 print(f'result2 : {result2}')
 '''
 
-# 위에 것에서 응용해본 문제
+# 위에 것에서 응용해본 문제근
 # 리스트안에 리스트에 각각 function을 다르게 주어서 연산하기
-#1/28 python vector 연산 x ,https://blog.naver.com/kunyoung90/222072887939 참고해서 해결
-myList = [[1,2],[3,4],[5,6],[7,8]]
+# 1/28 python vector 연산 x ,https://blog.naver.com/kunyoung90/222072887939 참고해서 해결
+myList = [[1, 2], [3, 4], [5, 6], [7, 8]]
 # for 반복문 이용 result1 = [] for val in myList: result1.append(val + 1) print(f'result1 : {result1}')
 # map 함수 이용
 def plusone(n):
     return n + 1
 def plustwo(n):
     return n + 2
+answer = []
 for j in myList:
-#    print(j) #[1,2]
+    #    print(j) #[1,2]myList = [[1, 2], [3, 4], [5, 6], [7, 8]]
+    # # for 반복문 이용 result1 = [] for val in myList: result1.append(val + 1) print(f'result1 : {result1}')
+    # # map 함수 이용
+    # def plusone(n):
+    #     return n + 1
+    # def plustwo(n):
+    #     return n + 2
+    # answer = []
+    # for j in myList:
+    #     #    print(j) #[1,2]
+    #     for i in range(len(myList)):
+    #         #        print(i) # 0, 1, 2, 3 , myList = 4
+    # #        if myList[i][0]:
+    # #            print(myList[i], '@@')
+    # #            print(myList[i][0], '@')
+    #         result = list(map(plusone, j))
+    #         print(result, '@', i)
+    #     answer.append(result)
+    # #            print(result, 'result')
+    # #        elif myList[i][1]:
+    # #            result = list(map(plustwo, j))
+    # #            print(result, 'result2')
+    # #            rofr= list(map(int,result))
+    # #print(f'r_of_r:{rofr}')
+    # print(answer)
+    # # goal!! : result = [[2,4],[4,6],[6,8],[8,10]]
+    # # subgoal : result = [[2,3],[4,5],[6,7],[8,9]]
     for i in range(len(myList)):
-#        print(i) # 0, 1, 2, 3 , myList = 4
-        if myList[i][0] :
-            print(myList[i],'@@')
-            print(myList[i][0],'@')
-            result = list(map(plusone, j))
-            print(result,'result')
-        elif myList[i][1] :
-            result = list(map(plustwo, j))
-            print(result, 'result2')
+        #        print(i) # 0, 1, 2, 3 , myList = 4
+#        if myList[i][0]:
+#            print(myList[i], '@@')
+#            print(myList[i][0], '@')
+        result = list(map(plusone, j))
+        print(result, '@', i)
+    answer.append(result)
+#            print(result, 'result')
+#        elif myList[i][1]:
+#            result = list(map(plustwo, j))
+#            print(result, 'result2')
+#            rofr= list(map(int,result))
+#print(f'r_of_r:{rofr}')
+print(answer)
+'''
+# 해결 
+def add_one(n):
+    my_list = list()
+    for i in range(len(n)):
+        my_list.append(n[i] + (i+1))
+    return my_list
 
-print(f'r_of_r:{result}')
+res = list(map(add_one, myList))
+print(res)
 
-#goal!! : result = [[2,4],[4,6],[6,8],[8,10]]
+# goal!! : result = [[2,4],[4,6],[6,8],[8,10]]
+# subgoal : result = [[2,3],[4,5],[6,7],[8,9]]
+'''
 
 
 # def add_one(n, k):
@@ -47,6 +89,7 @@ print(f'r_of_r:{result}')
 # result2 = list(map(add_one, myList))
 # # map반환을 list 로 변환
 # print(f'result2 : {result2}')
+
 
 '''
 ## code1
