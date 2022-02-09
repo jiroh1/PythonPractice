@@ -22,9 +22,12 @@ n	m	return
 자연수 2와 5의 최대공약수는 1, 최소공배수는 10이므로 [1, 10]을 리턴해야 합니다.
 '''
 
+
 def solution(n, m):
+
     answer = []
     return answer
+
 print(f"최대공약수와 최소공배수는 {solution(3,12)}")
 
 '''
