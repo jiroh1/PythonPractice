@@ -51,18 +51,20 @@ def solution(n):
 정리:
 1. 제곱근 계산 방법 - https://needneo.tistory.com/77
 2. 생각보다 어렵지 않았고, 최대한 코드를 짧고 간략하게 쓰는 연습을 해보았다. 
+3. 아직 한줄로 쓰는 것은 익숙하지가 않다.
+4. case#4 가 intger 인지 아닌지 확인하고 싶었던 생각으로 이용할 수 있는 코드인 것 같다. "math.sqrt(n).is_integer()
+
 
 다른 풀이:
 case#1
 def nextSqure(n):
     sqrt = n ** (1/2)
-
     if sqrt % 1 == 0:
         return (sqrt + 1) ** 2
     return 'no'
     
 case#2
-def nextSqure(n):
+def nextSqure(n):"
     return n == int(n**.5)**2 and int(n**.5+1)**2 or 'no'    
     
 case#3
@@ -78,22 +80,30 @@ def nextSqure(n):
 # 아래는 테스트로 출력해 보기 위한 코드입니다.
 print("결과 : {}".format(nextSqure(121)));
 
+def solution(n):
+    sqrt = int(n**(1/2)) # 제곱근
+    if (sqrt * sqrt) == n: # 제곱근 곱해서 다시 n이 되는 값인지로 확인
+        return (sqrt+1)**2 # 맞으면 제곱근 +1
+    return -1
 
 '''
-def solution(n):
-    answer = 0
-    sqrt = int(n**(1/2))
-    if (sqrt * sqrt) == n:
-        answer += (sqrt+1)**2
-    else:
-        return -1
-    return answer
+def nextS(n):
+    from math import sqrt
+    return "no" if sqrt(n) % 1 else int((sqrt(n)+1)**2)
+print(nextS(121),' : 2')
 
+def nextSqure(n):
+    from math import sqrt
+    if sqrt(n) % 1:
+        print(sqrt(n),'3-1')
+        return int((sqrt(n)+1)**2)
+    print(sqrt(n),'3-2')
+    return -1
+
+print(nextSqure(121),' : 3')
+
+def solution(n):
+    sqrt = int(n**(1/2)) # 제곱근
+    return -1 if (sqrt*sqrt) == n else (sqrt+1)**2
 
 print(solution(121))
-
-def solution(n):
-    sqrt = int(n**(1/2))
-    if (sqrt * sqrt) == n:
-        return (sqrt+1)**2
-    return -1
