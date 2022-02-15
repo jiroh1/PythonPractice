@@ -40,7 +40,7 @@ for i in range(len(n)):
 2. 하루 고민 해봤으나, for 문과 append로 풀려고 하다가 안됨.
 ->하루정도 지나서 풀이를 검색함 
 3. string으로 생각하는 것은 맞았음. 
-4.sorted 에서 reverse =True 로 바꾸면 내림차순으로 변한다.
+4.sorted 에서 reverse =True 로 바꾸면 내림차순으로 변한다. (sorted 면 list로 감싸주지 않아도됨)
 5. ''.join을 해주면 요소들을 공백없이 하나의 문자열로 합쳐준다.( list 내 요소에서도 가능)
 6 case #3과 같이 list에 append 하면서 넣을 순 있었을 것 같음.. 하지만 쉽지 않다.
 
@@ -61,7 +61,7 @@ def solution(n):
         answer+=str(k)
     return int(answer)
     
-case #3
+case #3 병합정렬
 
 def merge(left, right):
     result = []
