@@ -52,6 +52,7 @@ print("One-Line: " + ret)
 # Default: dog
 # One-Line: dog
 
+
 #case 3
 cat = 'cat'
 dog = 'dog'
