@@ -99,5 +99,6 @@ def solution(numbers):
 순열 : https://potensj.tistory.com/110
 최대 값 : https://devpouch.tistory.com/71
 정답 : https://wooaoe.tistory.com/82
-
+ascii code 가 키포인트인 문제 이고, 그것에 대한 자세한 설명은 아래
+https://dev-overload.tistory.com/10
 '''
