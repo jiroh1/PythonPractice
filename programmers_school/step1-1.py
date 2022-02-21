@@ -98,32 +98,24 @@ def solution(participant, completion):
     answer = ''
     for i in range(len(participant)):
         cnt = participant.count(participant[i])
-        #print(participant[i],'!',i)
+        print(participant[i],'!',i)
         if cnt > 1:  # list 안에 중복 있는 사람이면 그 사람을 먼저 넣고 return
-            print(cnt,'!!!!cnt')
             #print('!up')
             answer += participant[i]
-            # while len(answer) > 1:
-            #     return answer
-            # print(answer,'!')
-            a = set(participant)-set(completion)
-            print(a,'set후')
-            a = list(a)
-            a = str(''.join(list(a)))
-            print('!down')
-            answer += a
-            b= len(answer)/2
-            print(answer[:int(b)])
-            answer = answer[:int(b)]
-    else :
-        a = set(participant) - set(completion)
-        print(a, 'set후')
+            while len(answer)>1:
+                return answer
+
+
+    else:  # list안에 중복 되는 사람이 없는 경우, 완주자 명단에 있는 지 확인 후 return
+        a = set(participant)-set(completion)
+        print(a,'set후')
         a = list(a)
         a = str(''.join(list(a)))
         print('!down')
         answer += a
+        print(answer)
+        return answer
 
-    return answer
 #print(f'완주하지 못한 사람은 {solution(["marina", "josipa", "nikola", "vinko", "filipa"],	["josipa", "filipa", "marina", "nikola"])}입니다.') # kiki 가 나와야함
 #print(f'완주하지 못한 사람은 {solution(["leo","kiki", "kiki", "eden"],["eden", "kiki","kiki"] )}입니다.')
 #print(f'완주하지 못한 사람은 {solution(["leo","kiki", "kiki", "eden"],["eden", "leo","kiki"])}입니다.')
@@ -185,5 +177,11 @@ b.tolist() # [[1, 3], [5, 7]]
 https://zetawiki.com/wiki/Python_%EB%A6%AC%EC%8A%A4%ED%8A%B8_%EC%9A%94%EC%86%8C_%ED%8F%AC%ED%95%A8%EC%97%AC%EB%B6%80_%ED%99%95%EC%9D%B8_in
 2. count 함수로 list 안에 중복값 찾기
 https://velog.io/@haileeyu21/TIL-Python-%EB%A6%AC%EC%8A%A4%ED%8A%B8-%EC%A4%91%EB%B3%B5-%EC%9A%94%EC%86%8C-%EA%B0%9C%EC%88%98-%EC%B0%BE%EA%B8%B0-%EC%A0%9C%EA%B1%B0-%EC%82%AD%EC%A0%9C
+
+자료구조의 선택
+인덱스 말고 바로찾아갈 수 있는 구조
+HASH
+hash function을 이용하여 hash table 안에  HASH bucket을 만드는지 
+hash collision
 
 '''
