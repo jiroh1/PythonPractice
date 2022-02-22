@@ -189,4 +189,5 @@ def solution(n, lost, reserve):
 #print(f'수업을 들을 수 있는 학생의 수는 {solution(5,[2, 4],[1, 3, 5])}') #case #1 #5
 #print(f'수업을 들을 수 있는 학생의 수는 {solution(5,[2, 4],[3])}') #case #2 답 4
 #print(f'수업을 들을 수 있는 학생의 수는 {solution(3,[3],[1])}') #case #3 답 2
-print(f'수업을 들을 수 있는 학생의 수는 {solution(30,[2,3,5,7,29,30],[1,2,4,6])}') #new case
+#print(f'수업을 들을 수 있는 학생의 수는 {solution(30,[2,3,5,7,29,30],[1,2,4,6])}') #new case
+print(f'수업을 들을 수 있는 학생의 수는 {solution(10,[1,5,8,3,7],[7,5,2,9,6])}') #case #9
