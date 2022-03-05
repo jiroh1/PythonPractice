@@ -24,3 +24,13 @@ def sumMatrix(A,B):
     return answer
 
 print(sumMatrix(arr1,arr2))
+
+
+# 파이썬 리스트 비교  https://calssess.tistory.com/91
+
+A = [1, 2, 3, 4, 5, 6]
+B = [9, 8, 7, 6, 5]
+
+D = [i for i, j in zip(A, B) if i != j]
+
+print(D)
