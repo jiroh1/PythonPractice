@@ -92,6 +92,28 @@ def solution(N, number):
     return answer
 
 
+# 해설
+def sol(N, number):
+    s = [set() for x in range(8)]
+    for i, x in enumerate (s, start=1):
+        x.add(int(str(N) * i))
+    print(s) # [{5}, {55}, {555}, {5555}, {55555}, {555555}, {5555555}, {55555555}]
+    for i in range(1, len(s)):
+        for j in range(i):
+            for op1 in s[j]:
+                for op2 in s[i-j-1]:
+                    s[i].add(op1 + op2)
+                    s[i].add(op1 - op2)
+                    s[i].add(op1 * op2)
+                    if op2 != 0:
+                        s[i].add(op1 // op2)
+        if number in s[i]:
+            answer = i + 1
+            break
+    print(x)
+    return answer
+
+
 # print(f'사용횟수는 {solution()}')
 print(f'사용횟수는 {solution(2,22222)}')
 # print(f'사용횟수는 {solution(9,600)}')
