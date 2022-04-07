@@ -27,12 +27,6 @@ def solution(a, b):
     return answer
 
 
-
-# for i in range(0,6):
-#     print(i,'/',i%7,'*****')
-#     print(solution(1,i))
-
-
 # print(solution(5, 24))  # TUE
 print(solution(1, 1))  # FRI
 print(solution(1, 2),22)
