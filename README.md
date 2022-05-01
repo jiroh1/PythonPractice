@@ -1,2 +1,2 @@
 # Algorithm
-# For improving my python skill.
+### This repository is for improving my algorithm skills.
