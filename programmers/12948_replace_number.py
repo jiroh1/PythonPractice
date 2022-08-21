@@ -39,5 +39,12 @@ def solution(phone_number):
 # case 01
 def hide_numbers(s):
     return "*"*(len(s)-4) + s[-4:]
-     
+
+
+다시 풀이: 220821
+def solution(phone_number):
+    4<= len(phone_number) <=20
+    return phone_number.replace(phone_number[:-4], '*'*(len(phone_number)-4))
+    
+정리 : 쉽게 풀린듯, 범위 넣어보긴 했는데, 굳이 필요 없을 것 같긴함
 '''
