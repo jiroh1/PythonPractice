@@ -2,6 +2,7 @@
 """
 시저 암호
 https://school.programmers.co.kr/learn/courses/30/lessons/12926
+풀이 및 정리 : https://hoon2.notion.site/LV1_12926_-0f1c9260a9254018a21ddce57304cb41
 """
 # https://m.post.naver.com/viewer/postView.nhn?volumeNo=9638345&memberNo=34331610
 
