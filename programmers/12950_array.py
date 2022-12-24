@@ -15,28 +15,45 @@ arr1	arr2	return
 '''
 arr1 = [[1],[2]]
 arr2 = [[3],[4]]
+
 # arr1 = [[1,2],[2,3]]
 # arr2 = [[3,4],[5,6]]
 #
 # print(len(arr1[0]), arr1[1][1])
 
-def solution(arr1, arr2):
-    answer = []
-    for i in range(len(arr1)):
-        arr_sum = []
-        for j in range(len(arr1[0])):
-            sum = arr1[i][j]+arr2[i][j]
-            arr_sum.append(sum)
-        answer.append(arr_sum)
-    return answer
+# def solution(arr1, arr2):
+#     answer = []
+#     for i in range(len(arr1)):
+#         arr_sum = []
+#         for j in range(len(arr1[0])):
+#             sum = arr1[i][j]+arr2[i][j]
+#             arr_sum.append(sum)
+#         answer.append(arr_sum)
+#     return answer
+#
+#
+# print(solution(arr1,arr2))
 
 
-print(solution(arr1,arr2))
+import numpy as np
+def sumMatrix(A,B):
+    A=np.array(A)
+    print(A , 'aaaaaaa')
+    B=np.array(B)
+    print(B, 'bbbbbbb')
+    answer=A+B
+    print(answer)
+    return answer.tolist()
+
+print(sumMatrix(arr1,arr2))
+
+
 '''
 정리 : 
 1. for 문 두번 돌리면 되는 것을 처음에 arr1[i][j] 형태로 바로 풀어 버려서 index 오류가 발생했다.
 그래서 검색으로 for 문 두번 돌리는 것 확인하고 다시풀이 
 2. numpy 써도되는 것이었다... 
+-> np.array 로 array로 사칙연산가능 후 다시 array 에서 list로 변환. .tolist()
 
 다른 답 :
 case #1 , 참고 : https://wikidocs.net/32#zip
@@ -58,6 +75,9 @@ def sumMatrix(A,B):
 case #4
 def sumMatrix(A,B):
     answer = [[A[i][j] + B[i][j] for j in range(len(A[0]))] for i in range(len(A))]
+    
+    
+    su
 
     return answer
     
@@ -67,5 +87,6 @@ def sumMatrix(A,B):
     A=np.array(A)
     B=np.array(B)
     answer=A+B
-    return answer.tolist()
+    return answer.tolist() # .tolist() -> array 를 list 로 만들어주는 함수 
+    
 '''
