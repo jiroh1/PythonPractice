@@ -56,9 +56,21 @@ def solution(array, commands):
 def solution(array, commands):
     return [sorted(array[a-1:b])[c-1] for a,b,c in commands]
 
+# 새싹 강사님 답안
+def solution(array, commands):
+    answer = []
 
+    for i,j,k in commands:
+        #1번째 연산 자르기 (i번째부터 j번째까지)
+        new_array = array[i-1:j]
+        #2번째연산 정렬하기
+        new_array.sort()
+        #3번째 연산 k번째 값 가져오기
+        answer.append(new_array[k-1])
 
+    return answer
 print(solution([1, 5, 2, 6, 3, 7, 4], [[2, 5, 3], [4, 4, 1], [1, 7, 3]]))
+
 
 '''
 정리 : 
