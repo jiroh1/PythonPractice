@@ -12,8 +12,11 @@ https://school.programmers.co.kr/learn/courses/30/lessons/42747
 # 최종 제출 답안
 def solution(citations):
     citations=sorted(citations)
+    # [0, 1, 3, 5, 6]
     n=len(citations)
+    print(n)
     for i in range(n):
+        # print(i)
         if citations[i]>= n-i:
             return n-i
     return 0
@@ -26,6 +29,10 @@ print(solution(citations))
 """
 정리
 1. 문제 자체를 제대로 이해하지 못해서 답보고 겨우 이해함
+2. h가 증가함에 따라서 2가지 조건의 부합하는지 확인하여 max 값을 찾으면 된다.
+2-1 조건 1) 인용횟수가 h보다 크거나 같은 논문이 h개이상, 조건 2) 나머지 논문의 인용횟수가 h보다 작거나 같아야함.
+3. "citations[i]>= n-i" 은 문제에서 주어진 "h번 이상 인용된 논문이 h편 이상" 이라는 조건을 그대로 풀어쓴 것
+3-1. "citations[i] "는 i번 논문이 인용된 횟수, "l-i"는 인용된 논문의 개수 를 최대값부터 하나씩 줄여나간 것.
 """
 """
 H-Index
@@ -92,4 +99,11 @@ def solution(citations):
         if i >=citation:
             return i
     return len(citations)
+
+"""
+"""
+참고사이트
+https://velog.io/@jiffydev/%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%95%8C%EA%B3%A0%EB%A6%AC%EC%A6%98-89-%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-H-Index
+https://jokerldg.github.io/algorithm/2021/06/01/h-index.html
+https://walwalgabu.tistory.com/entry/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4%EC%A0%95%EB%A0%ACH-INDEX-%ED%8C%8C%EC%9D%B4%EC%8D%ACpython
 """
