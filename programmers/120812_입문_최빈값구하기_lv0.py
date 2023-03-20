@@ -44,5 +44,26 @@ array	result
 [1]에는 1만 있으므로 최빈값은 1입니다.
 """
 """
+정리
+1. counter 함수에 대해서 알았으면 되는 문제
+2. 그 후 집중 안하고 다른 답만 찾아 보려고 했던 듯.
+3. 풀이도 많이 없고 이해가 안되서 그냥 없다고 생각하고, 문제 그대로 풀이하니 오히려 잘 풀림
+"""
+"""
 다른풀이
+# case1
+def solution(array):
+    while len(array) != 0:
+        for i, a in enumerate(set(array)):
+            array.remove(a)
+        if i == 0: return a
+    return -1
+
+"""
+"""
+참고
+list 안에 위치 찾기
+https://eggwhite0.tistory.com/75
+counter
+https://codepractice.tistory.com/71
 """
