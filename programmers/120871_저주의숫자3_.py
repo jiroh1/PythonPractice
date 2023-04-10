@@ -26,3 +26,8 @@ print(solution(n))
 2. 쉽게 숫자 '3'을 사용안하는 것도 표현할 수 있었으나, 3의 배수에만 꽂혀서 문제를 제대로 못 풀었던 문제
 
 """
+
+"""
+참고
+https://www.youtube.com/watch?v=73kzECAq3CQ
+"""
