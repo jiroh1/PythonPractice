@@ -49,6 +49,13 @@ def solution(lines):
 """
 """
 다른풀이
+# case 0)
+def solution(lines):
+    s1 = set(i for i in range(lines[0][0], lines[0][1]))
+    s2 = set(i for i in range(lines[1][0], lines[1][1]))
+    s3 = set(i for i in range(lines[2][0], lines[2][1]))
+    return len((s1 & s2) | (s2 & s3) | (s1 & s3))
+
 # case 1
 def solution(lines):
     sets = [set(range(min(l), max(l))) for l in lines]
@@ -97,6 +104,7 @@ def solution(lines):
 정리
 1. 선분은 세개 각각 범위 만들어서 set 해서 원소 갯수 (범위)  길이 확인하는게 좋을 것 같다.
 2. 교집합을 잘이용하였으나, 합집합을 이용하지 못하여 range에 대해서 잘 구분을 못했다.
+3. case 0 이 내가 생각한 방법과 가장 비슷함. range도 굳이 +1 할 필요 없는 것도 확인 
 """
 """
 참고
