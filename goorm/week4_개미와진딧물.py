@@ -1,4 +1,37 @@
 # 최종답안 1
+N, M = map(int, input().split())
+ground = []
+for i in range(N):
+    ground.append(list(map(int, input().split())))
+    
+def Search(y, x, M):
+    # 윗 부분 탐색
+    for dy in range(-M, 0):
+        for dx in range(-M - dy, M + dy + 1):
+            if y + dy < 0 or N <= y + dy or x + dx < 0 or N <= x + dx:
+                continue
+            if ground[y + dy][x + dx] == 2:
+                return True
+    # 아랫 부분 탐색
+    for dy in range(M + 1):
+        for dx in range(dy - M, M - dy + 1):
+            if y + dy < 0 or N <= y + dy or x + dx < 0 or N <= x + dx:
+                continue
+            if ground[y + dy][x + dx] == 2:
+                return True
+    # 주어진 범위 내에서 진딧물을 발견하지 못했을 때
+    return False
+
+ans = 0
+for i in range(N):
+    for j in range(N):
+        # 개미에 해당하는 칸일 때만 탐색을 진행합니다.
+        if ground[i][j] == 1:
+            # (i, j) 칸을 중심으로 M칸 이내인 칸들을 탐색해봅니다.
+            if Search(i, j, M):
+                ans += 1
+
+print(ans)
 # 최종답안 2
 import sys
 
